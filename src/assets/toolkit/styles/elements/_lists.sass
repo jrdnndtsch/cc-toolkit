@@ -1,0 +1,44 @@
+//in order for the images to scale they must be squares
+.list--square
+	:padding 0
+	:list-style none
+	:margin 0 auto
+
+	li
+		:position relative
+		+display-for(xl lg)
+			:margin-bottom 40px
+			:margin-right 40px
+			:width calc(25% - 40px)
+			&:nth-of-type(4n + 4)
+				:margin-right 0	
+		+display-for(md sm xs)
+			:margin-bottom 32px	
+			:margin-right 32px
+		+display-for(md)			
+			:width calc(33% - 32px)
+			&:nth-of-type(3n + 3)
+				:margin-right 0
+		+display-for(sm)
+			:width calc(50% - 32px)
+			&:nth-of-type(2n + 2)
+				:margin-right 0
+		+display-for(xs)
+			:width 100%
+			:margin-right 0				
+
+		&:after
+			:content ''	
+			:display block
+			:padding-bottom 100%
+
+		a 
+			:position absolute
+			:width 100%
+			:height 100%
+	
+		img
+			:position absolute
+			:width 100%
+			:height 100%
+			:overflow hidden

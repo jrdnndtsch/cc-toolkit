@@ -1,0 +1,59 @@
+.deal-overview 
+	.col--two
+		&:nth-of-type(2n + 2)
+			:padding-left 78px
+			:align-self flex-end
+		div
+			&:first-of-type
+				:margin-bottom 34px
+				:border-bottom 2px solid $blue	
+	h2, p, span
+		:color $blue		
+	h2 
+		:font-size 40px
+		:font-weight normal
+		:margin-bottom 24px
+	p.vendor
+		:font-size 20px	
+		:margin-bottom 34px
+		:padding 0
+	p 
+		:font-size 14px
+		:line-height 21px
+		:margin-bottom 100px
+	span 
+		:margin-bottom 38px	
+	span.count 
+		:color $green
+	span.social
+		:margin-left 44px
+		// :position relative
+		// :width 300px
+		:display inline-block
+	ul.social-links
+		:list-style none
+		:padding 0 24px
+		:margin 0
+		:border 2px solid $blue
+		:display inline-block
+		// :position absolute
+		:background white
+
+		li 
+			:display inline-block
+			:text-align center
+			&:first-of-type
+				:padding-right 24px
+			&:last-of-type
+				:padding-left 24px
+			a 
+				:padding 15px 0
+				:display inline-block		
+			i 
+				:font-size 22px	
+				:color $blue
+	a.title--large
+		:padding 110px 0
+		:width 100%
+		:text-align center
+				
