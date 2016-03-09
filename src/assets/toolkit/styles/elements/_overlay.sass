@@ -1,0 +1,32 @@
+.overlay 	
+	:background cyan
+	:z-index 100
+	:display none
+
+
+	h3, p
+		:color white
+	h3 
+		:font-size 30px
+		:font-weight lighter
+		:padding 60px 40px 40px 40px
+	p 
+		:font-size 16px	
+		:padding 0 40px	
+.featured, .sub-featured
+	.overlay
+		:position absolute
+		:top 0
+		:width 100%
+		:height 100%
+.featured 
+	.overlay 
+		:background $green-light			
+.sub-featured
+	:position relative	
+	&:first-of-type
+		.overlay 
+			:background $green
+	&:last-of-type
+		.overlay 
+			:background $orange			
