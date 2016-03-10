@@ -2,10 +2,10 @@
 	:margin-bottom 40px
 	.col--half
 		+display-for(xl lg)
-			:width 50%
+			:width calc(50% - 20px)
+			// :width 50%
 			&:first-of-type
 				:margin-right 40px
-				:width calc(50% - 40px)
 		&:nth-child(2n + 1)
 			:position relative
 			a 
