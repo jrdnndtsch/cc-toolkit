@@ -1,28 +1,39 @@
-html 
+html
   box-sizing: border-box
 
-*, *:before, *:after 
+*, *:before, *:after
   box-sizing: inherit
 
 body
-	:margin 0  
-	// :font-family 'lineto'
+	:margin 0
+	:font-family 'lineto'
 	:margin-top 100px
 
-img 
+img
 	:max-width 100%
 h1, h2, h3, h4, h5, h6
 	:margin 0
-p 
+p
 	:margin 0
 	:padding-bottom 12px
 	:font-size 14px 
 	:line-height 21px
 a 
+
 	:text-decoration none
-ul 
+ul
 	:padding 0
 	:list-style none
-	:margin 0	
+	:margin 0
+
+hr
+	:width 100%
+	:margin 30px auto
+	:background-color $blue
+	:height 2px
+	:border 0
 .hidden
-	:display none !important				
+	:display none !important
+
+.text-center
+	:text-align center
