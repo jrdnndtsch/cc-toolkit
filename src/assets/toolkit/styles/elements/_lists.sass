@@ -40,7 +40,7 @@
 				:background $green-light
 		&:nth-of-type(4n + 4)
 			.overlay 
-				:background $blue					
+				:background $blue								
 
 
 		a, img, .overlay 
@@ -50,7 +50,82 @@
 	
 		img
 			:overflow hidden
+.list--square-thirds
+	:margin 0 auto
+	li
+		:position relative
+		+display-for(xl lg)
+			:margin-bottom 40px
+			:margin-right 40px
+			:width calc(25% - 26.666px)
+			&:nth-of-type(3n + 3)
+				:margin-right calc(12.5%)
+			&:nth-of-type(3n + 1)
+				:margin-left calc(12.5%)		
 
+		+display-for(md sm xs)
+			:margin-bottom 32px	
+			:margin-right 32px
+		+display-for(md)			
+			:width calc(33.333% - 21.3333px)
+			&:nth-of-type(3n + 3)
+				:margin-right 0
+		+display-for(sm)
+			:width calc(50% - 17px)
+			&:nth-of-type(2n + 2)
+				:margin-right 0
+		+display-for(xs)
+			:width 100%
+			:margin-right 0
+		&:after
+			:content ''	
+			:display block
+			:padding-bottom 100%	
+.list--square-text
+	:color white
+	li 
+		:text-align center
+		&:nth-of-type(4n + 1)
+			:background $green
+		&:nth-of-type(4n + 2)
+			:background $blue
+		&:nth-of-type(4n + 3)	
+			:background $green-light
+		&:nth-of-type(4n + 4)
+			:background $orange	
+		div
+			:position absolute
+			:top 40px
+			:width 80%
+			:margin 0 10%
+		h3 
+			:font-size 40px
+			:font-weight normal
+			:margin-bottom 28px	
+		p 
+			:font-size 20px
+			:line-height 23px
+			:font-weight normal	
+			:font-family 'freightbook'	
+						
+
+.list--press
+	li 
+		:display flex
+		:align-items center
+		:background $grey
+
+		img
+			:top 50%
+			:left 50%
+			:transform translate(-50%, -50%)
+			:width 50%
+			:height auto
+
+.section--secondary
+	.list--square, .list--square-thirds
+		li 
+			:margin-bottom 0			
 		
 			
 	 
