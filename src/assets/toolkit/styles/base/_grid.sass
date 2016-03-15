@@ -1,11 +1,11 @@
-.container 
+.container
 	.col
 		&--two
 			+make-column(20)
 			+display-for(xs)
 				+make-column(40)
 		&--three
-			+make-column(13.3)	
+			+make-column(13.3)
 			+display-for(sm)
 				+make-column(20)
 			+display-for(xs)
@@ -15,9 +15,17 @@
 			+display-for(sm)
 				+make-column(20)
 			+display-for(xs)
-				+make-column(40)			
-		&--half 
+				+make-column(40)
+		&--threefourths
+			+make-column(30)
+			+display-for(sm)
+				+make-column(30)
+			+display-for(xs)
+				+make-column(40)
+				+make-column(40)
+		&--half
 			+display-for(xl lg)
 				:width calc(50% - 20px)
 				&:nth-of-type(2n + 1)
 					:margin-right 40px		
+
