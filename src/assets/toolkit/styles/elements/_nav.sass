@@ -3,7 +3,7 @@
 	:width 100%
 	:background white
 	:z-index 2000
-	:padding 30px 0
+	:padding 35px 0
 	:margin-top -100px
 	.hamburger
 		:padding 6px 0
@@ -84,7 +84,16 @@
 		+display-for(xl)
 			:width 20%
 		p 
-			:padding-bottom 16px			
+			:padding-bottom 16px
+			:font-size 16px
+		input[type='email']
+			:width 100%	
+			:border 2px solid $blue
+			:background $grey
+			:margin-bottom 16px
+			&::placeholder 
+				:font-size 11px
+				:color $blue--light			
 
 	
 footer
