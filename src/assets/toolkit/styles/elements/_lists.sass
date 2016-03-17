@@ -4,26 +4,25 @@
 
 	li
 		:position relative
-		+display-for(xl lg)
+		+display-for(xl lg md)
 			:margin-bottom 40px
 			:margin-right 40px
 			:width calc(25% - 30px)
 			&:nth-of-type(4n + 4)
 				:margin-right 0	
-		+display-for(md sm xs)
+		+display-for(sm)
 			:margin-bottom 32px	
 			:margin-right 32px
-		+display-for(md)			
-			:width calc(33.333% - 21.3333px)
-			&:nth-of-type(3n + 3)
-				:margin-right 0
 		+display-for(sm)
-			:width calc(50% - 17px)
+			:width calc(50% - 16px)		
+		+display-for(xs)
+			:margin-right 20px
+			:margin-bottom 20px
+			:width calc(50% - 10px)			
+		+display-for(sm xs)
 			&:nth-of-type(2n + 2)
 				:margin-right 0
-		+display-for(xs)
-			:width 100%
-			:margin-right 0				
+
 
 		&:after
 			:content ''	

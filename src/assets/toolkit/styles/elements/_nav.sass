@@ -1,3 +1,6 @@
+body //to accomodate for changed height of nav at xs view
+	+display-for(xs)
+		:margin-top 85px
 .nav--sticky
 	:position fixed
 	:width 100%
@@ -5,6 +8,21 @@
 	:z-index 2000
 	:padding 35px 0
 	:margin-top -100px
+	+display-for(sm)
+		.col--three
+			:width 30%
+			&:nth-of-type(3n + 2)	
+				:width 40%
+	+display-for(xs)
+		:padding 30px 0
+		:margin-top -85px
+		.col--three.social-links 
+			:display none
+		.col--three
+			&:nth-of-type(3n + 2)				
+				:width 80%
+			&:first-of-type
+				:width 20%	
 	.hamburger
 		:padding 6px 0
 		:cursor pointer
@@ -13,7 +31,11 @@
 			:padding 5px 0
 			span 
 				&:first-of-type
-					:margin-bottom 12px		
+					:margin-bottom 12px	
+		+display-for(xs)
+			:padding 3px 0
+			&:hover
+				:padding 2px 0							
 		span
 			:transition all 0.5s ease
 			:width 40px
@@ -29,6 +51,9 @@
 		:margin 0 auto
 		:display block
 		:padding 4.5px 0
+		+display-for(xs)
+			:width 187px
+			:margin-left calc(100% - 187px)
 	.social-links 
 		:text-align right
 
@@ -65,11 +90,19 @@
 		:width 70%
 		+display-for(xl)
 			:width 80%
+		+display-for(sm)
+			:width 100%
+			:margin-bottom 40px	
 		ul 
 			:float left
 			:margin-right 90px
 			&:last-of-type
 				:margin-right 0
+			+display-for(xs)
+				:float none
+				:margin-right 0
+				:width 100%	
+				:margin-bottom 30px
 			li 
 				:font-size 11px
 				:text-transform uppercase
@@ -83,6 +116,10 @@
 		:width 30%	
 		+display-for(xl)
 			:width 20%
+		+display-for(sm)
+			:width 40%
+		+display-for(xs)
+			:width 100%		
 		p 
 			:padding-bottom 16px
 			:font-size 16px
@@ -93,7 +130,10 @@
 			:margin-bottom 16px
 			&::placeholder 
 				:font-size 11px
-				:color $blue--light			
+				:color $blue--light	
+		input[type='submit']				
+			:margin-bottom 0
+			:text-align right
 
 	
 footer

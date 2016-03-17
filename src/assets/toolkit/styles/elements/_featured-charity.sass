@@ -3,21 +3,39 @@
 	:text-align center
 	:padding 140px 0 50px 0
 	:margin-bottom 126px
+	+display-for(xs)
+		:margin 0 12px 40px 12px
+		:padding 24px 0 30px 0
 	.contained
 		:max-width 780px
 		:margin 0 auto
+		+display-for(xs)
+			:width 90%
+			:margin 0 5%
 	a 
 		:color $blue
 		:display block
 		:margin-bottom 42px
 		:font-size 20px
+		+display-for(xs)
+			:font-size 16px
+			:margin-bottom 24px
 	h2 
 		:font-size 80px
 		:margin-bottom 38px
+		+display-for(xs)
+			:font-size 40px
+			:margin-bottom 15px
+			
+
 	h3
 		:font-size 30px	
 		:margin-bottom 30px
 		:line-height 42px
 		:font-weight normal
+		+display-for(xs)
+			:font-size 18px
+			:line-height 22px
+			:margin-bottom 12px
 
 	

@@ -1,8 +1,12 @@
 .deal-overview 
 	.col--two
+		:align-self flex-end
+		+display-for(md sm xs)
+			:width 100%
 		&:nth-of-type(2n + 2)
 			:padding-left 78px
-			:align-self flex-end
+			+display-for(md sm xs)
+				:padding-left 0
 		div
 			&:first-of-type
 				:margin-bottom 34px
