@@ -3,56 +3,118 @@
 		:align-self flex-end
 		+display-for(md sm xs)
 			:width 100%
+		&:first-of-type
+			+display-for(md sm xs)
+				:margin-bottom 50px	
+
 		&:nth-of-type(2n + 2)
 			:padding-left 78px
 			+display-for(md sm xs)
 				:padding-left 0
-		div
-			&:first-of-type
-				:margin-bottom 34px
-				:border-bottom 2px solid $blue	
+			div
+				&:first-of-type
+					:margin-bottom 34px
+					:border-bottom 2px solid $blue
+					+display-for(xs)
+						:margin-bottom 20px		
+		
 	.col--two.featured-photo
 		:position relative
 		:text-align center
+
+		.slider-image-gallery
+			:overflow hidden
+			:border none
+			+display-for(lg xl)
+				:height auto !important
 		img
-			:display block	
+			:display block
+		.active-image
+			+display-for(md sm xs)
+				:display block
+		.hidden-image
+			+display-for(md sm xs)
+				:display none		
+		.slider-arrow-left, .slider-arrow-right
+			:position absolute
+			:z-index 1000
+			:top 50%
+			:transform translateY(-50%)
+			:cursor pointer	
+			+display-for(lg xl)
+				:display none
+			+display-for(md sm)
+				:width 18px
+		.slider-arrow-left
+			:left 10px
+			+display-for(md sm)
+				:left 18px
+		.slider-arrow-right
+			:right 10px	
+			+display-for(md sm)
+				:right 18px		
 		
 	img.col--third.deal-photo
+		:z-index -1
 		:position absolute
 		:width 80px
 		:bottom 0 
 		:padding-bottom 20px
+		+display-for(md sm xs)
+			// :top 0
+			// :left 0
+			// :width 100%
+			:position static
+			:width 100%
+			:padding-bottom 0
 		&:nth-child(3n + 3)
-			:left 50%
-			:transform translateX(-50%)
+			+display-for(xl lg)
+				:left 50%
+				:transform translateX(-50%)
 		&:nth-child(3n + 2)
-			:left calc(50% + 114px)
-			:transform translateX(-50%)
+			+display-for(xl lg)
+				:left calc(50% + 114px)
+				:transform translateX(-50%)
 		&:nth-child(3n + 1)
-			:left calc(50% - 114px)	
-			:transform translateX(-50%)
+			+display-for(xl lg)
+				:left calc(50% - 114px)	
+				:transform translateX(-50%)
 
-
-
-
+	
 	h2, p, span
-		:color $blue		
+		:color $blue
+	h2, p 
+		+display-for(md sm)
+			:width 80%			
 	h2 
 		:font-size 40px
 		:font-weight normal
 		:margin-bottom 24px
+		+display-for(xs)
+			:font-size 25px
+			:margin-bottom 20px
 	p.vendor
 		:font-size 20px	
 		:margin-bottom 34px
 		:padding 0
+		+display-for(xs)
+			:font-size 16px
+			:margin-bottom 20px
 	p 
 		:font-size 14px
 		:line-height 21px
 		:margin-bottom 100px
-		+display-for(lg md sm xs)
+		+display-for(lg sm)
 			:margin-bottom 20px
+		+display-for(md xs)
+			:margin-bottom 48px
+		+display-for(xs)
+			:font-size 16px	
+			
 	span 
-		:padding-bottom 38px	
+		:padding-bottom 38px
+		+display-for(xs)
+			:padding-bottom 28px	
 	span.count 
 		:color $green
 	span.social
@@ -64,4 +126,12 @@
 		:margin 110px 0
 		:width 100%
 		:text-align center
+		+display-for(md sm)
+			:font-size 60px
+			:margin 80px
+		+display-for(xs)
+			:width 70%
+			:max-width 240px
+			:margin 50px auto
+
 				

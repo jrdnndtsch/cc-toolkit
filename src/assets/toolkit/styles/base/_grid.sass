@@ -5,7 +5,7 @@
 			+display-for(xs)
 				+make-column(40)
 		&--three
-			+make-column(13.3)
+			+make-column(13.33)
 			+display-for(sm)
 				+make-column(20)
 			+display-for(xs)
@@ -24,8 +24,13 @@
 				+make-column(40)
 				+make-column(40)
 		&--half
-			+display-for(xl lg md)
+			+display-for(xl lg)
 				:width calc(50% - 20px)
 				&:nth-of-type(2n + 1)
-					:margin-right 40px		
+					:margin-right 40px	
+			+display-for(md sm xs)
+				:margin-bottom 20px
+				:width 100%
+				img 
+					:width 100%			
 

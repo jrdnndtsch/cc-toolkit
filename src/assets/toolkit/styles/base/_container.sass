@@ -6,15 +6,21 @@
 		:margin 0 auto
 	+display-for(xs)
 		:margin 0
-		:padding 0 12px		
+		:padding 0 $xs-margin		
 	&--flex
 		:display flex
 		:align-items stretch 
 		:flex-wrap wrap
-		:flex 1 0 50%	
+		:flex 1 0 50%
+	&--header-image
+		+display-for(md sm xs)
+			:margin 0
+			:padding 0
+			:width 100%
+
 .container--logo
 	:position relative
-	+display-for(md sm xs)
+	+display-for(lg md sm xs)
 		:display none
 	.logo-circle
 		:position absolute

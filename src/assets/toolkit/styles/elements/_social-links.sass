@@ -1,6 +1,9 @@
 ul.social-links
 	li 
 		:display inline-block 
+		:margin-right 10px
+		&:last-of-type
+			:margin-right 0
 	a 
 		:width 30px
 		:height 30px
@@ -8,11 +11,10 @@ ul.social-links
 		:border-radius 50%
 		:display inline-block
 		:text-align center
-		:margin-right 10px
 		:font-size 16px
 		:color $blue
 		i 
-			:line-height 28px	
+			:line-height 28px		
 .deal-overview
 	ul.social-links-square
 		:position absolute

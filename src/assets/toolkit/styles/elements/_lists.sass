@@ -4,22 +4,21 @@
 
 	li
 		:position relative
-		+display-for(xl lg md)
+		+display-for(xl lg)
 			:margin-bottom 40px
 			:margin-right 40px
 			:width calc(25% - 30px)
 			&:nth-of-type(4n + 4)
 				:margin-right 0	
-		+display-for(sm)
+		+display-for(md sm)
 			:margin-bottom 32px	
 			:margin-right 32px
-		+display-for(sm)
 			:width calc(50% - 16px)		
 		+display-for(xs)
 			:margin-right 20px
 			:margin-bottom 20px
 			:width calc(50% - 10px)			
-		+display-for(sm xs)
+		+display-for(md sm xs)
 			&:nth-of-type(2n + 2)
 				:margin-right 0
 
@@ -56,21 +55,22 @@
 		+display-for(xl lg)
 			:margin-bottom 40px
 			:margin-right 40px
+		+display-for(xl)	
 			:width calc(25% - 26.666px)
 			&:nth-of-type(3n + 3)
 				:margin-right calc(12.5%)
 			&:nth-of-type(3n + 1)
-				:margin-left calc(12.5%)		
+				:margin-left calc(12.5%)
+		+display-for(lg)
+			:width calc(33.3333% - 26.666px)
+			&:nth-of-type(3n + 3)
+				:margin-right 0				
 
 		+display-for(md sm xs)
 			:margin-bottom 32px	
 			:margin-right 32px
-		+display-for(md)			
-			:width calc(33.333% - 21.3333px)
-			&:nth-of-type(3n + 3)
-				:margin-right 0
-		+display-for(sm)
-			:width calc(50% - 17px)
+		+display-for(md sm)			
+			:width calc(50% - 16px)
 			&:nth-of-type(2n + 2)
 				:margin-right 0
 		+display-for(xs)
@@ -82,8 +82,15 @@
 			:padding-bottom 100%	
 .list--square-text
 	:color white
+
 	li 
 		:text-align center
+		+display-for(lg md sm xs)
+			:display flex
+			:align-items center
+		+display-for(xs)
+			:width 100%
+			:margin-right 0	
 		&:nth-of-type(4n + 1)
 			:background $green
 		&:nth-of-type(4n + 2)
@@ -93,10 +100,11 @@
 		&:nth-of-type(4n + 4)
 			:background $orange	
 		div
-			:position absolute
-			:top 40px
 			:width 80%
 			:margin 0 10%
+			+display-for(xl)
+				:position absolute
+				:top 40px
 		h3 
 			:font-size 40px
 			:font-weight normal
@@ -106,13 +114,21 @@
 			:line-height 23px
 			:font-weight normal	
 			:font-family 'freightbook'	
-						
+.list--square-text-quarter
+	li 
+		+display-for(lg)
+			:width calc(50% - 20px)
+			&:nth-of-type(2n + 2)
+				:margin-right 0							
 
 .list--press
 	li 
 		:display flex
 		:align-items center
 		:background $grey
+		+display-for(xs)
+			:width 100%
+			:margin-right 0
 
 		img
 			:top 50%
@@ -124,7 +140,8 @@
 .section--secondary
 	.list--square, .list--square-thirds
 		li 
-			:margin-bottom 0			
+			+display-for(xl)
+				:margin-bottom 0			
 		
 			
 	 

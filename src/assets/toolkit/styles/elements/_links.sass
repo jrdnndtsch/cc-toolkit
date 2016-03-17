@@ -1,6 +1,8 @@
 .link--secondary
 	:color $orange
 	:font-size 40px
+	+display-for(xs)
+		:font-size 25px
 input.link--secondary
 	:background white
 	:border none
@@ -8,8 +10,10 @@ input.link--secondary
 	:cursor pointer
 	:font-size 40px
 	:padding 0
+
 	&:focus
 		:outline none
+
 .link--tertiary
 	:color $orange
 	:font-size 21px

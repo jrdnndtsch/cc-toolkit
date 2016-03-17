@@ -1,14 +1,18 @@
 .featured-deals
 	:margin-bottom 40px
-	+display-for(sm)
+	+display-for(md sm)
 		:margin-bottom 32px
 	+display-for(xs)
 		:margin-bottom 20px	
 	.col--half
+		+display-for(md sm xs)
+			:width 100%	
+			// :margin-right 0
 		&:nth-child(2n + 1)
 			:position relative
-			+display-for(sm xs)
-				:width 100%	
+			+display-for(md)
+				:height 640px
+				:margin-bottom 32px	
 			+display-for(sm)
 				:height 570px
 				:margin-bottom 32px
@@ -25,10 +29,10 @@
 				:display block
 				&:first-of-type
 					:margin-bottom 40px	
-					+display-for(sm)
+					+display-for(md sm)
 						:margin-bottom 32px
 					+display-for(xs)
 						:margin-bottom 20px	
 		img 
-			// :width 100%
+			:width 100%
 			:display block

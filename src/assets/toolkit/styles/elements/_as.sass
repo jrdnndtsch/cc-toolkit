@@ -10,42 +10,98 @@
 	:margin-top 20px
 	:font-size 20px
 	:line-height 24px
+.as--padded
+	+display-for(md)
+		:padding 0 40px	
+	+display-for(sm)
+		:padding 0 20px	
+.as--link-contained
+	+display-for(sm)
+		:margin 0 30px
+	+display-for(xs)
+		:max-width 280px
+.as--title-long
+	+display-for(sm)
+		:font-size 65px				
 .as--section-how-it-works
 	:text-align center
 	.col--three
+		+display-for(sm xs)
+			+make-column(40)
+			:padding 0
+			:max-width 300px
+			:margin 0 auto
+			:margin-bottom 45px
 		&:nth-of-type(3n + 1)
 			:color $green
-			:padding 0 50px 0 80px
+			+display-for(xl lg)
+				:padding 0 50px 0 80px
+			+display-for(md)
+				:padding 0 30px 0 20px
 		&:nth-of-type(3n + 2)
 			:color $green-light
-			:padding 0 50px 
+			+display-for(xl lg)
+				:padding 0 50px 
+			+display-for(md)
+				:padding 0 30px
 		&:nth-of-type(3n + 3)
 			:color $orange
-			:padding 0 80px 0 50px
+			+display-for(xl lg)
+				:padding 0 80px 0 50px
+			+display-for(md)
+				:padding 0 20px 0 30px
 		img 
 			:margin-bottom 40px
+			+display-for(sm xs)
+				:margin-bottom 28px
 		h3 
 			:font-size 40px
 			:font-weight normal
 			:margin-bottom 20px	
+			+display-for(sm xs)
+				:margin-bottom 16px
+				:font-size 25px
 		p 
 			:font-size 20px
-			:line-height 23px	
+			:line-height 23px
+			:font-size 16px
+			:line-height 18px	
 .as--section-the-team
 	:color $blue
 	.col--two
+		+display-for(md sm)
+			+make-column(40)
+			:width 70%	
 		&:first-of-type
 			:padding 0 70px 0 180px
+			+display-for(md sm)
+				:padding 0 0 0 20px
+			+display-for(xs)
+				:padding 0	
+			+display-for(md sm xs)
+				:margin-bottom 50px	
 		&:last-of-type
 			:padding 0 180px 0 70px
+			+display-for(md sm)
+				:padding 0 0 0 20px
+			+display-for(xs)
+				:padding 0	
 		img 
 			:margin-bottom 40px	
+			+display-for(xs)
+				:margin-bottom 26px
+				:width 100%
 		h3 
 			:font-size 40px
 			:font-weight normal
-			:margin-bottom 10px		
+			:margin-bottom 10px	
+			+display-for(xs)
+				:font-size 25px	
 		h4 
 			:font-size 20px
 			:font-weight normal
 			:margin-bottom 20px
+			+display-for(xs)
+				:font-size 16px
+				:margin-bottom 18px
 
