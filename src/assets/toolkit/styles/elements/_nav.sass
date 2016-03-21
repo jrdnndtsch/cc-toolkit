@@ -1,5 +1,5 @@
 body //to accomodate for changed height of nav at xs view
-	+display-for(xs)
+	+display-for(sm xs)
 		:margin-top 85px
 .nav--sticky
 	:position fixed
@@ -8,12 +8,7 @@ body //to accomodate for changed height of nav at xs view
 	:z-index 2000
 	:padding 35px 0
 	:margin-top -100px
-	+display-for(sm)
-		.col--three
-			:width 30%
-			&:nth-of-type(3n + 2)	
-				:width 40%
-	+display-for(xs)
+	+display-for(sm xs)
 		:padding 30px 0
 		:margin-top -85px
 		.col--three.social-links 
@@ -27,15 +22,8 @@ body //to accomodate for changed height of nav at xs view
 		:padding 6px 0
 		:cursor pointer
 		:transition all 0.5s ease
-		&:hover
-			:padding 5px 0
-			span 
-				&:first-of-type
-					:margin-bottom 12px	
-		+display-for(xs)
-			:padding 3px 0
-			&:hover
-				:padding 2px 0							
+		:z-index 10000	
+								
 		span
 			:transition all 0.5s ease
 			:width 40px
@@ -44,14 +32,33 @@ body //to accomodate for changed height of nav at xs view
 			:display block
 			&:first-of-type
 				:margin-bottom 10px
+	.hamburger.close
+		&:hover
+			:padding 5px 0
+			span 
+				&:first-of-type
+					:margin-bottom 12px	
+		+display-for(sm xs)
+			:padding 3px 0
+			&:hover
+				:padding 2px 0				
 		
-
+	.hamburger.active
+		span 
+			:background white
+			&:first-of-type
+				:margin-bottom -4px
+				:transform rotate(45deg)
+				:transform-origin center
+			&:last-of-type
+				:transform rotate(-45deg)	
+				:transform-origin center
 	.logo
 		:width 240px
 		:margin 0 auto
 		:display block
 		:padding 4.5px 0
-		+display-for(xs)
+		+display-for(sm xs)
 			:width 187px
 			:margin-left calc(100% - 187px)
 	.social-links 
@@ -66,11 +73,22 @@ body //to accomodate for changed height of nav at xs view
 	:display flex
 	:align-items center
 	:left -100%
+	+display-for(xs)
+		:width 100%
+		:text-align center
+	ul 
+		+display-for(xs)
+			:width 100%	
 
 	li 
 		:width 200px
 		:border-bottom 4px solid $blue
-		:margin-bottom 46px
+		:margin-bottom 40px
+		:transition all 0.5s ease
+		+display-for(xs)
+			:margin 0 auto
+			:display block
+			:margin-bottom 40px
 		&:hover 
 			:border-bottom 4px solid white
 
@@ -78,6 +96,7 @@ body //to accomodate for changed height of nav at xs view
 		:color white
 		:font-size 40px
 		:display inline-block
+		:margin-bottom 6px
 .nav--footer
 	:background $grey
 	:color $blue
