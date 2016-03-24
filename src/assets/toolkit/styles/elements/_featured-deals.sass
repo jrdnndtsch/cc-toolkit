@@ -7,32 +7,41 @@
 	.col--half
 		+display-for(md sm xs)
 			:width 100%	
-			// :margin-right 0
-		&:nth-child(2n + 1)
-			:position relative
-			+display-for(md)
-				:height 640px
-				:margin-bottom 32px	
-			+display-for(sm)
-				:height 570px
+		&:last-of-type
+			+display-for(md sm xs)
+				:margin-bottom 0
+		&:first-of-type
+			+display-for(md sm)
 				:margin-bottom 32px
 			+display-for(xs)
-				:height 400px
-				:margin-bottom 20px	
-			a 
-				:position absolute
-				:width 100%
-				:height 100%	
+				:margin-bottom 20px
+						
+			// :margin-right 0
+		// &:nth-child(2n + 1)
+		// 	:position relative
+		// 	+display-for(md)
+		// 		:height 640px
+		// 		:margin-bottom 32px	
+		// 	+display-for(sm)
+		// 		:height 570px
+		// 		:margin-bottom 32px
+		// 	+display-for(xs)
+		// 		:height 400px
+		// 		:margin-bottom 20px	
+		// 	a 
+		// 		:position absolute
+		// 		:width 100%
+		// 		:height 100%	
 
-		&:nth-child(2n + 2)
-			a
-				:display block
-				&:first-of-type
-					:margin-bottom 40px	
-					+display-for(md sm)
-						:margin-bottom 32px
-					+display-for(xs)
-						:margin-bottom 20px	
+	
+		a
+			:display block
+			// &:first-of-type
+			// 	:margin-bottom 40px	
+			// 	+display-for(md sm)
+			// 		:margin-bottom 32px
+			// 	+display-for(xs)
+			// 		:margin-bottom 20px	
 		img 
 			:width 100%
 			:display block
