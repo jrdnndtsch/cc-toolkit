@@ -97,6 +97,36 @@ body //to accomodate for changed height of nav at xs view
 		:font-size 40px
 		:display inline-block
 		:margin-bottom 6px
+
+.nav--admin
+	>ul
+		:display flex
+		:justify-content space-around
+	ul 
+		:color white
+		:background $blue
+		li 
+			:padding 10px 0
+			:width 100%
+			:text-align center
+			:cursor pointer
+			&:hover
+				:text-decoration underline
+		a 
+			:color white
+		li.drop-down-parent
+			:position relative	
+		ul.drop-down
+			:position absolute
+			:width 100%
+			:top 40px
+			:z-index 2000
+			li 
+				:display block	
+				&:hover
+					:background lighten($blue, 10%)
+					:text-decoration none
+
 .nav--footer
 	:background $grey
 	:color $blue
