@@ -1,4 +1,4 @@
-.deal-overview 
+.overview
 	.col--two
 		:align-self flex-end
 		+display-for(md sm xs)
@@ -29,6 +29,7 @@
 				:height auto !important
 		img
 			:display block
+			:width 100%
 		.active-image
 			+display-for(md sm xs)
 				:display block
@@ -93,13 +94,15 @@
 		+display-for(xs)
 			:font-size 25px
 			:margin-bottom 20px
-	p.vendor
+	p.vendor, a.vendor
 		:font-size 20px	
 		:margin-bottom 34px
 		:padding 0
 		+display-for(xs)
 			:font-size 16px
 			:margin-bottom 20px
+	a.vendor
+		:color $blue		
 	p 
 		:font-size 14px
 		:line-height 21px
@@ -133,5 +136,8 @@
 			:width 70%
 			:max-width 240px
 			:margin 50px auto
+.overview--charity
+	span.social
+		:padding-left 0			
 
 				
