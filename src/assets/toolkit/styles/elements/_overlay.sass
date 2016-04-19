@@ -1,7 +1,8 @@
 .overlay
-	:background cyan
 	:z-index 100
 	:display none
+	+display-for(sm xs)
+		:display block
 
 	h3, p
 		:color white
@@ -9,9 +10,22 @@
 		:font-size 30px
 		:font-weight lighter
 		:padding 60px 40px 40px 40px
+		+display-for(sm xs)
+			:padding 8px 16px 0 16px
+		+display-for(sm)
+			:font-size 16px
+		+display-for(xs)
+			:font-size 12px
 	p
 		:font-size 16px
 		:padding 0 40px
+		+display-for(sm xs)
+			:padding 0px 16px 8px 16px
+		+display-for(sm)
+			:font-size 12px
+		+display-for(xs)
+			:font-size 10px
+
 .overlay--sold-out
 	h3
 		:position absolute
@@ -21,7 +35,7 @@
 		:padding 0
 		:text-transform uppercase
 		:width 100%
-		:text-align center	
+		:text-align center
 
 .featured, .sub-featured
 	.overlay
@@ -29,6 +43,9 @@
 		:top 0
 		:width 100%
 		:height 100%
+		+display-for(sm xs)
+			:height 60px
+			:margin-top calc(100% - 60px)
 .featured
 	.overlay
 		:background $green-light
