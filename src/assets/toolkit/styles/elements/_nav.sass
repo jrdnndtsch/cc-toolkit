@@ -11,19 +11,19 @@ body //to accomodate for changed height of nav at xs view
 	+display-for(sm xs)
 		:padding 30px 0
 		:margin-top -85px
-		.col--three.social-links 
+		.col--three.social-links
 			:display none
 		.col--three
-			&:nth-of-type(3n + 2)				
+			&:nth-of-type(3n + 2)
 				:width 80%
 			&:first-of-type
-				:width 20%	
+				:width 20%
 	.hamburger
 		:padding 6px 0
 		:cursor pointer
 		:transition all 0.5s ease
-		:z-index 10000	
-								
+		:z-index 10000
+
 		span
 			:transition all 0.5s ease
 			:width 40px
@@ -35,23 +35,23 @@ body //to accomodate for changed height of nav at xs view
 	.hamburger.close
 		&:hover
 			:padding 5px 0
-			span 
+			span
 				&:first-of-type
-					:margin-bottom 12px	
+					:margin-bottom 12px
 		+display-for(sm xs)
 			:padding 3px 0
 			&:hover
-				:padding 2px 0				
-		
+				:padding 2px 0
+
 	.hamburger.active
-		span 
+		span
 			:background white
 			&:first-of-type
 				:margin-bottom -4px
 				:transform rotate(45deg)
 				:transform-origin center
 			&:last-of-type
-				:transform rotate(-45deg)	
+				:transform rotate(-45deg)
 				:transform-origin center
 	.logo
 		:width 240px
@@ -61,7 +61,7 @@ body //to accomodate for changed height of nav at xs view
 		+display-for(sm xs)
 			:width 187px
 			:margin-left calc(100% - 187px)
-	.social-links 
+	.social-links
 		:text-align right
 
 .nav--slide
@@ -76,11 +76,12 @@ body //to accomodate for changed height of nav at xs view
 	+display-for(xs)
 		:width 100%
 		:text-align center
-	ul 
+		:padding 0
+	ul
 		+display-for(xs)
-			:width 100%	
+			:width 100%
 
-	li 
+	li
 		:width 200px
 		:border-bottom 4px solid $blue
 		:margin-bottom 40px
@@ -89,10 +90,10 @@ body //to accomodate for changed height of nav at xs view
 			:margin 0 auto
 			:display block
 			:margin-bottom 40px
-		&:hover 
+		&:hover
 			:border-bottom 4px solid white
 
-	a 
+	a
 		:color white
 		:font-size 40px
 		:display inline-block
@@ -102,27 +103,27 @@ body //to accomodate for changed height of nav at xs view
 	>ul
 		:display flex
 		:justify-content space-around
-	ul 
+	ul
 		:color white
 		:background $blue
-		li 
+		li
 			:padding 10px 0
 			:width 100%
 			:text-align center
 			:cursor pointer
 			&:hover
 				:text-decoration underline
-		a 
+		a
 			:color white
 		li.drop-down-parent
-			:position relative	
+			:position relative
 		ul.drop-down
 			:position absolute
 			:width 100%
 			:top 40px
 			:z-index 2000
-			li 
-				:display block	
+			li
+				:display block
 				&:hover
 					:background lighten($blue, 10%)
 					:text-decoration none
@@ -132,7 +133,7 @@ body //to accomodate for changed height of nav at xs view
 	:color $blue
 	:padding 46px 0 54px 0
 
-	a 
+	a
 		:color $blue
 
 	div.links
@@ -141,8 +142,8 @@ body //to accomodate for changed height of nav at xs view
 			:width 80%
 		+display-for(sm)
 			:width 100%
-			:margin-bottom 40px	
-		ul 
+			:margin-bottom 40px
+		ul
 			:float left
 			:margin-right 90px
 			&:last-of-type
@@ -150,50 +151,48 @@ body //to accomodate for changed height of nav at xs view
 			+display-for(xs)
 				:float none
 				:margin-right 0
-				:width 100%	
+				:width 100%
 				:margin-bottom 30px
-			li 
+			li
 				:font-size 11px
 				:text-transform uppercase
 				:line-height 18px
 				&:first-of-type
 					:font-size 16px
 					:padding-bottom 16px
-					:display block	
+					:display block
 					:text-transform lowercase
 	div.sign-up
-		:width 30%	
+		:width 30%
 		+display-for(xl)
 			:width 20%
 		+display-for(sm)
 			:width 40%
 		+display-for(xs)
-			:width 100%		
-		p 
+			:width 100%
+		p
 			:padding-bottom 16px
 			:font-size 16px
 		input[type='email']
-			:width 100%	
+			:width 100%
 			:border 2px solid $blue
 			:background $grey
 			:margin-bottom 16px
-			&::placeholder 
+			&::placeholder
 				:font-size 11px
-				:color $blue--light	
-		input[type='submit']				
+				:color $blue--light
+		input[type='submit']
 			:margin-bottom 0
 			:text-align right
 
-	
+
 footer
 	:background $blue
 	:color $blue--light
 	:font-size 10px
 
-	p 
-		:padding 19px 0	
+	p
+		:padding 19px 0
 
-		span 
+		span
 			:padding 0 18px
-
-
