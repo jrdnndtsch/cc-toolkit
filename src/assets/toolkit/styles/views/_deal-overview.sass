@@ -5,7 +5,7 @@
 			:width 100%
 		&:first-of-type
 			+display-for(md sm xs)
-				:margin-bottom 50px	
+				:margin-bottom 50px
 
 		&:nth-of-type(2n + 2)
 			:padding-left 78px
@@ -16,8 +16,8 @@
 					:margin-bottom 34px
 					:border-bottom 2px solid $blue
 					+display-for(xs)
-						:margin-bottom 20px		
-		
+						:margin-bottom 20px
+
 	.col--two.featured-photo
 		:position relative
 		:text-align center
@@ -35,13 +35,13 @@
 				:display block
 		.hidden-image
 			+display-for(md sm xs)
-				:display none		
+				:display none
 		.slider-arrow-left, .slider-arrow-right
 			:position absolute
 			:z-index 1000
 			:top 50%
 			:transform translateY(-50%)
-			:cursor pointer	
+			:cursor pointer
 			+display-for(lg xl)
 				:display none
 			+display-for(md sm)
@@ -51,14 +51,14 @@
 			+display-for(md sm)
 				:left 18px
 		.slider-arrow-right
-			:right 10px	
+			:right 10px
 			+display-for(md sm)
-				:right 18px		
-		
+				:right 18px
+
 	img.col--third.deal-photo
 		:position absolute
 		:width 80px
-		:bottom 0 
+		:bottom 0
 		:padding-bottom 20px
 		+display-for(md sm xs)
 			:z-index -1
@@ -78,16 +78,16 @@
 				:transform translateX(-50%)
 		&:nth-child(3n + 1)
 			+display-for(xl lg)
-				:left calc(50% - 114px)	
+				:left calc(50% - 114px)
 				:transform translateX(-50%)
 
-	
+
 	h2, p, span
 		:color $blue
-	h2, p 
+	h2, p
 		+display-for(md sm)
-			:width 80%			
-	h2 
+			:width 80%
+	h2
 		:font-size 40px
 		:font-weight normal
 		:margin-bottom 24px
@@ -95,17 +95,21 @@
 			:font-size 25px
 			:margin-bottom 20px
 	p.vendor, a.vendor
-		:font-size 20px	
-		:margin-bottom 34px
+		:font-size 20px
+		:margin-bottom 10px
 		:padding 0
 		+display-for(xs)
 			:font-size 16px
 			:margin-bottom 20px
 	a.vendor
 		:color $blue
-		:margin-bottom 24px 
-		:display inline-block		
-	p 
+		:display inline-block
+	a.location
+		:color $blue
+		:margin-bottom 24px
+		:display inline-block
+		:font-size 14px
+	p
 		:font-size 14px
 		:line-height 21px
 		:margin-bottom 100px
@@ -114,13 +118,13 @@
 		+display-for(md xs)
 			:margin-bottom 48px
 		+display-for(xs)
-			:font-size 16px	
-			
-	span 
+			:font-size 16px
+
+	span
 		:padding-bottom 38px
 		+display-for(xs)
-			:padding-bottom 28px	
-	span.count 
+			:padding-bottom 28px
+	span.count
 		:color $green
 	span.social
 		:padding-left 44px
@@ -140,6 +144,4 @@
 			:margin 50px auto
 .overview--charity
 	span.social
-		:padding-left 0			
-
-				
+		:padding-left 0
