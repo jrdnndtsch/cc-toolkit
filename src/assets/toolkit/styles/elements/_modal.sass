@@ -5,6 +5,14 @@
 	:padding 50px 65px
 	:position fixed
 	:z-index 1000
+	+display-for(sm)
+	  :width 460px
+	  :margin
+	    :left 12px
+	    :right 12px
+	+display-for(xs)
+	  :width 270px
+	  :padding 20px 35px
 .modal--overlay
 	:position fixed
 	:top 0
@@ -13,6 +21,7 @@
 	:right 0
 	:z-index 100
 	:background-color rgba(0,0,0,0.4)
+
 .alert
 	:background white
 	:position fixed
@@ -31,5 +40,14 @@
   :font-size 28px
   :margin-bottom 50px
   :color $blue
+  :width 100%
+  +display-for(sm)
+    :font-size 28px
+    :margin-bottom 20px
+  +display-for(xs)
+    :font-size 18px
+    :margin-bottom 10px
 .modal-text
-  :color $blue
+	:color $blue
+.total-height
+	:height 100vh
