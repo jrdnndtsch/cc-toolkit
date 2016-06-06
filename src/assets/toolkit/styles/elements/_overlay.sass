@@ -7,9 +7,11 @@
 	h3, p
 		:color white
 	h3
-		:font-size 30px
+		:font-size 24px
 		:font-weight lighter
-		:padding 60px 40px 40px 40px
+		:padding 20px 40px 40px 40px
+		+display-for(md)
+			:padding-top 40px
 		+display-for(sm xs)
 			:padding 8px 16px 0 16px
 		+display-for(sm)
@@ -17,8 +19,11 @@
 		+display-for(xs)
 			:font-size 12px
 	p
-		:font-size 16px
+		:font-size 18px
 		:padding 0 40px
+		:position absolute
+		+display-for(md lg xl)
+			:bottom 20px
 		+display-for(sm xs)
 			:padding 0px 16px 8px 16px
 		+display-for(sm)
@@ -46,6 +51,10 @@
 		+display-for(sm xs)
 			:height 60px
 			:margin-top calc(100% - 60px)
+		+display-for(md lg xl)	
+			h3 
+				:font-size 30px
+				:padding-top 40px	
 .featured
 	.overlay
 		:background $green-light

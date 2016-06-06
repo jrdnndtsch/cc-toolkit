@@ -9,11 +9,13 @@
 
 		&:nth-of-type(2n + 2)
 			:padding-left 78px
+			+display-for(xl lg md)
+				:margin-bottom 96px
 			+display-for(md sm xs)
 				:padding-left 0
 			div
 				&:first-of-type
-					:margin-bottom 34px
+					:margin-bottom 24px
 					:border-bottom 2px solid $blue
 					+display-for(xs)
 						:margin-bottom 20px
@@ -45,7 +47,7 @@
 			+display-for(lg xl)
 				:display none
 			+display-for(md sm)
-				:width 18px
+				:width 18px	
 		.slider-arrow-left
 			:left 10px
 			+display-for(md sm)
@@ -54,32 +56,30 @@
 			:right 10px
 			+display-for(md sm)
 				:right 18px
+		.slider-arrow-right, 
+		.slider-arrow-left
+			+display-for(xs)
+				:max-width 12px		
 
 	img.col--third.deal-photo
-		:position absolute
+		// :position absolute
 		:width 80px
-		:bottom 0
-		:padding-bottom 20px
+		// :bottom 0
+		// :padding-bottom 20px
+		:display inline-block
+		:margin-right 16px 
+		:margin-top 12px
+		&:last-of-type
+			:margin-right 0
 		+display-for(md sm xs)
 			:z-index -1
 			// :top 0
 			// :left 0
 			// :width 100%
+			:margin 0
 			:position static
 			:width 100%
 			:padding-bottom 0
-		&:nth-child(3n + 3)
-			+display-for(xl lg)
-				:left 50%
-				:transform translateX(-50%)
-		&:nth-child(3n + 2)
-			+display-for(xl lg)
-				:left calc(50% + 114px)
-				:transform translateX(-50%)
-		&:nth-child(3n + 1)
-			+display-for(xl lg)
-				:left calc(50% - 114px)
-				:transform translateX(-50%)
 
 
 	h2, p, span
@@ -94,6 +94,11 @@
 		+display-for(xs)
 			:font-size 25px
 			:margin-bottom 20px
+	p.price
+		:color $green
+		:font-size 22px
+		:padding-bottom 4px	
+		:margin-bottom 20px	
 	p.vendor, a.vendor
 		:font-size 20px
 		:margin-bottom 10px
@@ -107,7 +112,7 @@
 	a.location
 		:color $blue
 		:margin-bottom 24px
-		:display inline-block
+		:display block
 		:font-size 14px
 	p
 		:font-size 14px
@@ -121,11 +126,14 @@
 			:font-size 16px
 
 	span
-		:padding-bottom 38px
+		:padding-bottom 24px
+		:display inline-block
 		+display-for(xs)
-			:padding-bottom 28px
+			:padding-bottom 20px
 	span.count
 		:color $green
+		:margin-left 20px
+		:margin-right 4px
 	span.social
 		:padding-left 44px
 		:width calc(100% - 60px)

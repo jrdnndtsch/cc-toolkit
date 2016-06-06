@@ -1,10 +1,17 @@
+.container.featured-charity 
+	+display-for(md sm xs)
+		:margin 0
+		:margin-bottom 30px
+.container.featured-charity + .container
+	h2 
+		:margin-bottom 30px
 .featured-charity
 	:color white
 	:text-align center
 	:padding 140px 0 50px 0
 	:margin-bottom 60px
 	+display-for(xs)
-		:margin 0 $xs-margin 40px $xs-margin
+		:margin 0 
 		:padding 24px 0 30px 0
 	.contained
 		:max-width 680px

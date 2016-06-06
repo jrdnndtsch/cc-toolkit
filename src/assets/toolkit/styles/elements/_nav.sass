@@ -90,9 +90,18 @@ body //to accomodate for changed height of nav at xs view
 			:margin 0 auto
 			:display block
 			:margin-bottom 40px
-		&:hover
+		&:before
+			:content ''
+			:display block
+			:position relative
+			:margin-top -2px
+			:width 0
+			:top 60px
 			:border-bottom 4px solid white
-
+			:transition width .4s
+		&:hover
+			&:before
+				:width 100%
 	a
 		:color white
 		:font-size 36px
@@ -199,3 +208,5 @@ footer
 
 		span
 			:padding 0 18px
+			+display-for(xs)
+				:padding 0 10px
