@@ -1,6 +1,7 @@
 .link--secondary
 	:color $orange
 	:font-size 40px
+	:cursor pointer
 	+display-for(xs)
 		:font-size 25px
 input.link--secondary
@@ -10,6 +11,7 @@ input.link--secondary
 	:cursor pointer
 	:font-size 40px
 	:padding 0
+	:cursor pointer
 
 	&:focus
 		:outline none
@@ -18,8 +20,17 @@ input.link--secondary
 	:color $orange
 	:font-size 21px
 	:font-family 'lineto'
+	:cursor pointer
+
 input.link--tertiary
 	:background transparent
 	:float right
 	:padding 0
 	:border none
+	:cursor pointer
+.link--modal
+  :font-size 44px
+  :text-align right
+  +display-for(sm xs)
+  	:font-size 34px
+
