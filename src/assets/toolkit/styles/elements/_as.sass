@@ -1,7 +1,13 @@
+.hidden
+	:display none 
 .as--blue
 	:color $blue
 .as--centered
 	:text-align center
+.as--margin-bottom-20	
+	:margin-bottom 20px
+.as--padding-bottom-8
+	:padding-bottom 8px	
 .as--email
 	:font-size 20px
 	:color $green
@@ -10,6 +16,8 @@
 	:margin-top 20px
 	:font-size 20px
 	:line-height 24px
+.lineup-content
+	:padding 12px 20px	
 .as--padded
 	+display-for(md)
 		:padding 0 40px
@@ -32,6 +40,17 @@
 .as--about-desc
 	p 
 		:font-size 16px 
+span.as--font-small		
+	:font-size 16px
+	:margin-left 10px
+	:padding-bottom 0 !important
+.as--deal-details
+	:color $blue
+	:font-size 14px
+	ul 
+		:list-style disc
+		:list-style-position inside
+		:margin-bottom 24px	
 
 .as--section-how-it-works
 	.as--offset-anchor

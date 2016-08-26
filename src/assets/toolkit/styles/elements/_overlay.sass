@@ -10,6 +10,9 @@
 		:font-size 24px
 		:font-weight lighter
 		:padding 20px 40px 40px 40px
+		+display-for(lg)
+			:padding 20px 
+			:font-size 18px
 		+display-for(md)
 			:padding-top 40px
 		+display-for(sm xs)
@@ -22,6 +25,9 @@
 		:font-size 18px
 		:padding 0 40px
 		:position absolute
+		+display-for(lg)
+			:padding 0 20px
+			:font-size 14px
 		+display-for(md lg xl)
 			:bottom 20px
 		+display-for(sm xs)
@@ -31,39 +37,39 @@
 		+display-for(xs)
 			:font-size 10px
 
-.overlay--sold-out
-	h3
-		:position absolute
-		:top 50%
-		:left 50%
-		:transform translate(-50%, -50%)
-		:padding 0
-		:text-transform uppercase
-		:width 100%
-		:text-align center
+// .overlay--sold-out
+// 	h3
+// 		:position absolute
+// 		:top 50%
+// 		:left 50%
+// 		:transform translate(-50%, -50%)
+// 		:padding 0
+// 		:text-transform uppercase
+// 		:width 100%
+// 		:text-align center
 
-.featured, .sub-featured
-	.overlay
-		:position absolute
-		:top 0
-		:width 100%
-		:height 100%
-		+display-for(sm xs)
-			:height 60px
-			:margin-top calc(100% - 60px)
-		+display-for(md lg xl)	
-			h3 
-				:font-size 30px
-				:padding-top 40px	
-.featured
-	.overlay
-		:background $green-light
-.featured-deals
-	.col--half
-		:position relative
-		&:first-of-type
-			.overlay
-				:background $green
-		&:last-of-type
-			.overlay
-				:background $orange
+// .featured, .sub-featured
+// 	.overlay
+// 		:position absolute
+// 		:top 0
+// 		:width 100%
+// 		:height 100%
+// 		+display-for(sm xs)
+// 			:height 60px
+// 			:margin-top calc(100% - 60px)
+// 		+display-for(md lg xl)	
+// 			h3 
+// 				:font-size 30px
+// 				:padding-top 40px	
+// .featured
+// 	.overlay
+// 		:background $green-light
+// .featured-deals
+// 	.col--half
+// 		:position relative
+// 		&:first-of-type
+// 			.overlay
+// 				:background $green
+// 		&:last-of-type
+// 			.overlay
+// 				:background $orange

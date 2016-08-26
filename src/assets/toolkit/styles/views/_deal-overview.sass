@@ -1,8 +1,41 @@
 .overview
+	.button--download 
+		:display block
+		:margin-bottom 24px
 	.col--two
-		:align-self flex-end
+		:align-self flex-start
 		+display-for(md sm xs)
 			:width 100%
+		h3 
+			:font-size 20px 
+			:font-weight normal
+			:font-family 'lineto'	
+			:margin-bottom 12px
+		[data-expand]
+			:margin-bottom 24px
+			:cursor pointer	
+		span.plus-sign
+			:background $blue
+			:width 8px
+			:height 2px
+			:padding-bottom 0
+			:vertical-align middle
+			:margin-left 8px
+			:cursor pointer
+			:transition all 0.4s ease
+			&:after
+				:content ''
+				:background $blue
+				:width 8px
+				:height 2px
+				:padding-bottom 0
+				:transform rotate(90deg)
+				:display block
+				:transition all 0.4s ease
+		span.plus-sign.closed
+			&:after
+				:transform rotate(0deg)		
+
 		&:first-of-type
 			+display-for(md sm xs)
 				:margin-bottom 50px
@@ -101,6 +134,9 @@
 		:font-size 22px
 		:padding-bottom 4px	
 		:margin-bottom 20px	
+	p.savings
+		:font-size 16px
+		:padding-bottom 0	
 	p.vendor, a.vendor
 		:font-size 20px
 		:margin-bottom 10px
@@ -119,7 +155,7 @@
 	p
 		:font-size 14px
 		:line-height 21px
-		:margin-bottom 100px
+		:margin-bottom 40px
 		+display-for(lg sm)
 			:margin-bottom 20px
 		+display-for(md xs)
@@ -152,6 +188,12 @@
 			:width 70%
 			:max-width 240px
 			:margin 50px auto
+#company-description
+	:display none
+	:border-bottom none
+	a.location 
+		&:first-of-type
+			:margin-bottom 8px		
 .overview--charity
 	span.social
 		:padding-left 0

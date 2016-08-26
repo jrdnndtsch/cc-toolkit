@@ -1,8 +1,17 @@
 //in order for the images to scale they must be squares
+	
 .list--square
 
 	li
 		:position relative
+		img 
+			:width 100%
+		a 
+			:color white
+		h3 
+			:font-weight lighter	
+			:font-size 24px
+			:letter-spacing 1.2px	
 		+display-for(xl lg)
 			:margin-bottom 40px
 			:margin-right 40px
@@ -27,20 +36,20 @@
 			:display block
 			:padding-bottom 100%
 		&:nth-of-type(4n + 1)
-			.overlay
+			.lineup-content, .overlay
 				:background $green
 		&:nth-of-type(4n + 2)
-			.overlay
+			.lineup-content, .overlay
 				:background $orange
 		&:nth-of-type(4n + 3)
-			.overlay
+			.lineup-content, .overlay
 				:background $green-light
 		&:nth-of-type(4n + 4)
-			.overlay
+			.lineup-content, .overlay
 				:background $blue
 
 
-		a, img, .overlay
+		.overlay-link, .overlay-image, .overlay
 			:position absolute
 			:width 100%
 			:height 100%
@@ -50,7 +59,8 @@
 				:height 60px
 
 		img
-			:overflow hidden
+			:display block
+
 .list--square-thirds
 	:margin 0 auto
 	li

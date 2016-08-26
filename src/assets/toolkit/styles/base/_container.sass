@@ -1,5 +1,8 @@
 .container
-	@extend %make-adaptive
+	:width 85%
+	:max-width 1280px
+	:margin 0 auto
+	// @extend %make-adaptive
 	+display-for(xl)
 		:margin 0 auto
 	:box-sizing border-box
@@ -21,7 +24,7 @@
 			:color white
 			:top 50%
 			:left 50%
-			:transform translate(-50%, -50%)
+			:transform translate(-50%, -50%)		
 
 .container--items-center
 	:align-items center	!important
