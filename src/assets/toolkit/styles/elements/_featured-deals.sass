@@ -5,6 +5,25 @@
 	+display-for(xs)
 		:margin-bottom 20px	
 	.col--half
+		span 
+			:overflow hidden
+			:display block
+		&:hover
+			img 
+				:transform scale(1.02)
+				:transform-style preserve-3d
+				:backface-visibility hidden
+				:filter brightness(101%)
+			&:last-of-type
+				.lineup-content
+					:background lighten($green, 5)
+			&:first-of-type
+				.lineup-content
+					:background lighten($blue, 5)
+
+		img 
+			:transition 0.3s all ease		
+
 		a 
 			:color white
 		h3 
@@ -13,6 +32,8 @@
 			:letter-spacing 1.2px
 		+display-for(sm xs)
 			:width 100%	
+		.lineup-content
+			:transition 0.3s all ease	
 		&:last-of-type
 			:background $green
 			+display-for(md sm xs)

@@ -1,9 +1,18 @@
 .hidden
 	:display none 
+.how-it-works-icon
+	:height 120px 
+	:width auto	
+.as--line-break-title
+	span
+		+display-for(xl lg)
+			:display block	
 .as--blue
 	:color $blue
 .as--centered
 	:text-align center
+.as--aligned-center
+	:align-items center	
 .as--margin-bottom-20	
 	:margin-bottom 20px
 .as--padding-bottom-8
@@ -47,10 +56,16 @@ span.as--font-small
 .as--deal-details
 	:color $blue
 	:font-size 14px
+	:border-bottom 2px solid $blue
+	:margin-bottom 24px
+	:padding-bottom 24px
+	p 
+		:margin-bottom 0
 	ul 
 		:list-style disc
 		:list-style-position inside
-		:margin-bottom 24px	
+		:margin-bottom 0px	
+
 
 .as--section-how-it-works
 	.as--offset-anchor
@@ -96,7 +111,7 @@ span.as--font-small
 			:font-size 20px
 			:line-height 23px
 			:font-size 16px
-			:line-height 18px
+			:line-height 18px			
 .as--section-the-team
 	:color $blue
 	.col--two

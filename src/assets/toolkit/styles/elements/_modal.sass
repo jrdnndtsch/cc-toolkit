@@ -1,8 +1,8 @@
 .modal
-	:width 575px
+	:width 650px
 	:background white
 	:border 6px solid $blue
-	:padding 40px 60px
+	:padding 40px 60px 
 	:position fixed
 	:z-index 1000
 	:color $blue
@@ -15,12 +15,12 @@
 		:font-size 22px
 		:cursor pointer	
 	+display-for(sm)
-	  :width 460px
+	  :width 470px
 	  :margin
 	    :left 12px
 	    :right 12px
 	+display-for(xs)
-	  :width 270px
+	  :width 320px
 	  :padding 20px 35px
 .modal--overlay
 	:position fixed
@@ -51,7 +51,7 @@
   :color $blue
   :width 100%
   +display-for(sm)
-    :font-size 28px
+    :font-size 18px
     :margin-bottom 20px
   +display-for(xs)
     :font-size 18px
@@ -61,4 +61,6 @@
 .total-height
 	:height 100vh
 .modal--cards
-	:margin-top 20px	
+	:margin-top 20px
+#download-modal
+	:padding-bottom 0px		

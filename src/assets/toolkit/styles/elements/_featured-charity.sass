@@ -1,4 +1,5 @@
 .container.featured-charity 
+	:background $blue
 	:margin-bottom 30px
 	+display-for(md sm xs)
 		:margin 0
@@ -10,27 +11,30 @@
 .featured-charity
 	:color white
 	:text-align center
-	:padding 140px 0 50px 0
+	:padding 120px 0 50px 0
 	// :margin-bottom 60px
 	+display-for(xs)
 		:margin 0 
 		:padding 24px 0 30px 0
 	.contained
-		:max-width 680px
+		:width 90%
 		:margin 0 auto
 		+display-for(xs)
 			:width 90%
 			:margin 0 5%
 	a
 		:color white
-		:display block
-		:margin-bottom 42px
-		:font-size 20px
+		// :display block
+		
 		+display-for(xs)
 			:font-size 16px
 			:margin-bottom 24px
+	a.view-deals
+		:display block
+		:margin-bottom 12px
+		:font-size 20px		
 	h2
-		:font-size 60px
+		:font-size 55px
 		:font-weight 100
 		:margin-bottom 38px
 		+display-for(xs)

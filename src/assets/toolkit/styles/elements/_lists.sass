@@ -4,13 +4,34 @@
 
 	li
 		:position relative
+		&:hover 
+			img 
+				:transform scale(1.05)
+				:width 100%
+				:filter brightness(101%)
+			&:nth-of-type(4n + 1)
+				.lineup-content, .overlay
+					:background lighten($green, 5)
+			&:nth-of-type(4n + 2)
+				.lineup-content, .overlay
+					:background lighten($orange, 5)
+			&:nth-of-type(4n + 3)
+				.lineup-content, .overlay
+					:background lighten($green-light, 5)
+			&:nth-of-type(4n + 4)
+				.lineup-content, .overlay
+					:background lighten($blue, 5)							
+		span
+			:overflow hidden
+			:display block		
 		img 
 			:width 100%
+			:transition 0.3s all ease
 		a 
 			:color white
 		h3 
 			:font-weight lighter	
-			:font-size 24px
+			:font-size 18px
 			:letter-spacing 1.2px	
 		+display-for(xl lg)
 			:margin-bottom 40px
@@ -30,11 +51,6 @@
 			&:nth-of-type(2n + 2)
 				:margin-right 0
 
-
-		&:after
-			:content ''
-			:display block
-			:padding-bottom 100%
 		&:nth-of-type(4n + 1)
 			.lineup-content, .overlay
 				:background $green
@@ -48,7 +64,8 @@
 			.lineup-content, .overlay
 				:background $blue
 
-
+		.lineup-content, .overlay 
+			:transition 0.3s all ease
 		.overlay-link, .overlay-image, .overlay
 			:position absolute
 			:width 100%

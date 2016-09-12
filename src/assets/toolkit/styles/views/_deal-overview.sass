@@ -42,11 +42,9 @@
 
 		&:nth-of-type(2n + 2)
 			:padding-left 78px
-			+display-for(xl lg md)
-				:margin-bottom 96px
 			+display-for(md sm xs)
 				:padding-left 0
-			div
+			>div
 				&:first-of-type
 					:margin-bottom 24px
 					:border-bottom 2px solid $blue
@@ -126,17 +124,22 @@
 		:font-size 40px
 		:font-weight normal
 		:margin-bottom 24px
+		:line-height 36px
 		+display-for(xs)
 			:font-size 25px
+			:line-height 20px
 			:margin-bottom 20px
-	p.price
+	.price
 		:color $green
-		:font-size 22px
-		:padding-bottom 4px	
-		:margin-bottom 20px	
+		// :font-size 22px
+		// :padding-bottom 4px	
+		// :margin-bottom 20px	
 	p.savings
 		:font-size 16px
-		:padding-bottom 0	
+		:padding-bottom 0
+		:margin-bottom 12px	
+		&:nth-of-type(2)
+			:margin-bottom 24px
 	p.vendor, a.vendor
 		:font-size 20px
 		:margin-bottom 10px
